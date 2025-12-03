@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HEAL Wellness | Peptides, GLP-1, Hormones & Skincare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="HEAL Wellness offers personalized peptide therapy, GLP-1 medical weight loss, hormone optimization, and estriol face & neck creams with convenient membership options."
+  />
+  <style>
+    :root {
+      --heal-orange: #a24c24;       /* from your logo */
+      --heal-cream: #f7eee7;
+      --heal-dark: #2f1b13;
+      --heal-accent: #8bb9a1;       /* soft, fresh green */
+      --heal-light: #ffffff;
+      --heal-gray: #6b6b6b;
+      --shadow-soft: 0 12px 25px rgba(0, 0, 0, 0.06);
+      --radius-card: 16px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--heal-cream);
+      color: var(--heal-dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Top bar */
+
+    .top-bar {
+      background: var(--heal-orange);
+      color: var(--heal-light);
+      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
+    }
+
+    .top-bar-inner {
+      margin: 0 auto;
+      max-width: var(--max-width);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-bar-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .top-pill {
+      border-radius: 999px;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+      font-size: 0.85rem;
+    }
+
+    .top-pill:hover {
+      background: var(--heal-light);
+      color: var(--heal-orange);
+    }
+
+    /* Header / Nav */
+
+    header {
+      background: linear-gradient(135deg, #fffdf9, #ffeede);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.1rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      background: var(--heal-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--heal-orange);
+    }
+
+    .brand-text span:last-child {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--heal-gray);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 0;
+      background: var(--heal-orange);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--heal-orange);
+      color: var(--heal-light);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(162, 76, 36, 0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--heal-orange);
+      border: 1px solid var(--heal-orange);
+    }
+
+    .btn-outline:hover {
+      background: rgba(162, 76, 36, 0.06);
+    }
+
+    /* Hero */
+
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1rem 3.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(162, 76, 36, 0.06);
+      color: var(--heal-orange);
+      margin-bottom: 1rem;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--heal-accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: var(--heal-dark);
+    }
+
+    .hero h1 span.accent {
+      color: var(--heal-orange);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--heal-gray);
+      margin-bottom: 1.5rem;
+      max-width: 34rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: var(--heal-gray);
+    }
+
+    .hero-note strong {
+      color: var(--heal-dark);
+    }
+
+    .hero-card {
+      background: var(--heal-light);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-soft);
+      padding: 1.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .hero-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--heal-gray);
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .hero-card li::before {
+      content: "•";
+      color: var(--heal-accent);
+      margin-right: 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    .hero-state {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed rgba(0, 0, 0, 0.06);
+      font-size: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .hero-state span.state-pill {
+      border-radius: 999px;
+      padding: 0.3rem 0.8rem;
+      background: rgba(139, 185, 161, 0.15);
+      color: var(--heal-dark);
+      font-weight: 500;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 2.5rem 1rem;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--heal-orange);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--heal-gray);
+      max-width: 34rem;
+      margin: 0.2rem auto 0;
+    }
+
+    /* How it works */
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .step-card {
+      background: var(--heal-light);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-soft);
+      padding: 1.4rem 1.3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: rgba(162, 76, 36, 0.08);
+      color: var(--heal-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .step-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: var(--heal-gray);
+    }
+
+    /* Treatments */
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .pill-row span {
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      background: rgba(162, 76, 36, 0.06);
+      color: var(--heal-dark);
+    }
+
+    .treatments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .treatment-card {
+      background: var(--heal-light);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-soft);
+      padding: 1.4rem 1.3rem 1.6rem;
+      border-top: 4px solid var(--heal-orange);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .treatment-tag {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--heal-gray);
+      margin-bottom: 0.3rem;
+    }
+
+    .treatment-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .treatment-card p {
+      font-size: 0.9rem;
+      color: var(--heal-gray);
+      margin-bottom: 0.5rem;
+    }
+
+    .treatment-card ul {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--heal-gray);
+      margin-bottom: 0.9rem;
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .treatment-card ul li::before {
+      content: "✓";
+      color: var(--heal-accent);
+      margin-right: 0.4rem;
+    }
+
+    .treatment-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--heal-gray);
+      margin-top: 0.4rem;
+    }
+
+    /* Memberships */
+
+    .memberships {
+      background: linear-gradient(135deg, #fffdf9, #ffe8d5);
+    }
+
+    .membership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .membership-card {
+      background: var(--heal-light);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-soft);
+      padding: 1.6rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .membership-card.best::before {
+      content: "Most Popular";
+      position: absolute;
+      top: 12px;
+      right: -40px;
+      transform: rotate(35deg);
+      background: var(--heal-orange);
+      color: var(--heal-light);
+      font-size: 0.7rem;
+      padding: 0.3rem 2.8rem;
+    }
+
+    .membership-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .membership-term {
+      font-size: 0.85rem;
+      color: var(--heal-gray);
+      margin-bottom: 0.75rem;
+    }
+
+    .membership-price {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--heal-orange);
+    }
+
+    .membership-note {
+      font-size: 0.8rem;
+      color: var(--heal-gray);
+      margin-bottom: 0.8rem;
+    }
+
+    .membership-card ul {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--heal-gray);
+      display: grid;
+      gap: 0.35rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .membership-card ul li::before {
+      content: "•";
+      color: var(--heal-accent);
+      margin-right: 0.3rem;
+    }
+
+    .membership-footnote {
+      font-size: 0.8rem;
+      color: var(--heal-gray);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* Why section */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .why-card {
+      background: var(--heal-light);
+      border-radius: var(--radius-card);
+      padding: 1.3rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      border-left: 4px solid rgba(162, 76, 36, 0.4);
+    }
+
+    .why-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .why-card p {
+      font-size: 0.9rem;
+      color: var(--heal-gray);
+    }
+
+    /* Questionnaire */
+
+    .questionnaire-wrap {
+      background: var(--heal-light);
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      padding: 1.8rem 1.5rem 1.6rem;
+      max-width: 900px;
+      margin: 0 auto;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .form-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .form-header h3 {
+      font-size: 1.1rem;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      min-width: 120px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 33%;
+      background: linear-gradient(90deg, var(--heal-orange), var(--heal-accent));
+      transition: width 0.25s ease;
+    }
+
+    form {
+      font-size: 0.9rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.14);
+      padding: 0.5rem 0.6rem;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border 0.15s ease, box-shadow 0.15s ease;
+      background: #fcfaf8;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--heal-orange);
+      box-shadow: 0 0 0 1px rgba(162, 76, 36, 0.1);
+      background: #ffffff;
+    }
+
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--heal-gray);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+
+    .form-footer small {
+      font-size: 0.78rem;
+      color: var(--heal-gray);
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn-secondary {
+      background: rgba(0, 0, 0, 0.03);
+      border-radius: 999px;
+      padding: 0.55rem 1.1rem;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .form-step {
+      display: none;
+    }
+
+    .form-step.active {
+      display: block;
+    }
+
+    /* FAQ / footer */
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .faq-item h4 {
+      font-size: 0.98rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item p {
+      font-size: 0.88rem;
+      color: var(--heal-gray);
+    }
+
+    footer {
+      background: #22130d;
+      color: rgba(255, 255, 255, 0.85);
+      padding: 2.5rem 1rem 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2.2fr 1.5fr 1.5fr;
+      gap: 1.8rem;
+      font-size: 0.86rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-logo-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--heal-orange);
+    }
+
+    .footer-columns h4 {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-columns ul {
+      list-style: none;
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .footer-columns a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.85rem;
+    }
+
+    .footer-columns a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 1.5rem auto 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none; /* keep header clean on mobile – can add burger menu later */
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero {
+        padding-top: 2rem;
+      }
+      .top-bar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div>Questions? Call or text <strong>(XXX) XXX-XXXX</strong></div>
+      <div class="top-bar-actions">
+        <button class="top-pill">Book a free consult</button>
+        <button class="top-pill">Existing patient login</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <nav class="nav">
+      <div class="nav-left">
+        <div class="logo-box">
+          <!-- Replace with your actual logo path -->
+          <img src="heal-logo.png" alt="HEAL Wellness logo" />
+        </div>
+        <div class="brand-text">
+          <span>HEAL Wellness</span>
+          <span>Peptides · GLP-1 · Hormones</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#treatments">Treatments</a>
+        <a href="#memberships">Memberships</a>
+        <a href="#questionnaire">Eligibility quiz</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <button class="btn btn-outline" onclick="scrollToSection('questionnaire')">Check eligibility</button>
+        <button class="btn btn-primary">Shop treatments</button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Modern medical wellness, done gently.
+        </div>
+        <h1>
+          Personalized <span class="accent">peptides, GLP-1s, hormones,</span>
+          and silky estriol skincare – tailored to you.
+        </h1>
+        <p class="hero-subtitle">
+          HEAL Wellness pairs evidence-based medicine with high-touch care to help you feel lighter,
+          stronger, and more confident in your skin – without overwhelming you with options.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToSection('questionnaire')">
+            Start medical history questionnaire
+          </button>
+          <button class="btn btn-outline" onclick="scrollToSection('treatments')">
+            Explore services
+          </button>
+        </div>
+        <p class="hero-note">
+          <strong>Fast:</strong> most patients complete the questionnaire in under 5 minutes.  
+          <strong>Safe:</strong> reviewed by licensed clinicians.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <h3>What we specialize in</h3>
+        <ul>
+          <li>Medical weight loss with GLP-1s (Semaglutide, Tirzepatide, and more)</li>
+          <li>Advanced peptide therapy for recovery, longevity, and performance</li>
+          <li>Hormone optimization (men & women)</li>
+          <li>Estriol face & neck creams for smooth, radiant skin</li>
+          <li>Curated 3, 6, and 12-month wellness memberships</li>
+        </ul>
+        <div class="hero-state">
+          <div>
+            <strong>We come to you – virtually.</strong><br />
+            Based on your location, we’ll match you to the correct provider and pharmacy.
+          </div>
+          <span class="state-pill">
+            Your state: <span id="userState">detecting…</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- How it works -->
+  <section id="how">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">How it works</div>
+        <h2 class="section-title">Care that feels simple, not stressful.</h2>
+        <p class="section-subtitle">
+          A streamlined, medical-grade process designed so you can go from “curious” to “confident” in just a few steps.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Tell us about you</h3>
+          <p>
+            Complete a secure medical history questionnaire – including past conditions, medications,
+            goals, and symptoms – so our team can understand your full picture.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Meet your HEAL clinician</h3>
+          <p>
+            A licensed provider reviews your answers, confirms your eligibility by state, and meets
+            with you virtually if needed to finalize your personalized plan.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Receive treatments & ongoing support</h3>
+          <p>
+            Medications ship directly from partner pharmacies. Your membership includes check-ins,
+            refills, and dose adjustments so you’re never left guessing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatments -->
+  <section id="treatments">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">Treatments</div>
+        <h2 class="section-title">Targeted therapies, thoughtfully chosen.</h2>
+        <p class="section-subtitle">
+          We focus on a curated menu of treatments so we can do them exceptionally well – and keep your plan
+          clear, realistic, and sustainable.
+        </p>
+      </div>
+
+      <div class="pill-row">
+        <span>Medical GLP-1 weight loss</span>
+        <span>Peptide therapy</span>
+        <span>Hormone optimization</span>
+        <span>Estriol face & neck creams</span>
+        <span>Membership-based care</span>
+      </div>
+
+      <div class="treatments-grid">
+        <div class="treatment-card">
+          <div>
+            <div class="treatment-tag">GLP-1s • Weight loss</div>
+            <h3>GLP-1 Medical Weight Loss</h3>
+            <p>
+              Physician-directed programs using medications like Semaglutide and Tirzepatide, paired
+              with realistic nutrition guidance.
+            </p>
+            <ul>
+              <li>Gradual, sustainable weight loss</li>
+              <li>Appetite & craving control</li>
+              <li>Ongoing dose monitoring for safety</li>
+            </ul>
+          </div>
+          <div class="treatment-footer">
+            <span>Available in select states.</span>
+            <button class="btn btn-outline" type="button" onclick="scrollToSection('questionnaire')">
+              Check eligibility
+            </button>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div>
+            <div class="treatment-tag">Peptides • Longevity</div>
+            <h3>Peptide Therapy</h3>
+            <p>
+              Evidence-based peptides selected for recovery, gut support, inflammation, sleep, and
+              performance – personalized to your lab work when available.
+            </p>
+            <ul>
+              <li>Support joint & tissue repair</li>
+              <li>Enhance sleep, focus & resilience</li>
+              <li>Options for gut, skin & immune health</li>
+            </ul>
+          </div>
+          <div class="treatment-footer">
+            <span>Includes education & dosing support.</span>
+            <button class="btn btn-outline" type="button">View peptide options</button>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div>
+            <div class="treatment-tag">Hormone therapies</div>
+            <h3>Hormone Optimization</h3>
+            <p>
+              Individualized plans for men and women to address low energy, brain fog, mood changes,
+              and mid-life metabolic shifts.
+            </p>
+            <ul>
+              <li>Comprehensive symptom & lab review</li>
+              <li>Bio-identical and traditional options</li>
+              <li>Regular follow-up to fine-tune dosing</li>
+            </ul>
+          </div>
+          <div class="treatment-footer">
+            <span>Labs may be required in some states.</span>
+            <button class="btn btn-outline" type="button">Learn about hormone care</button>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div>
+            <div class="treatment-tag">Topical • Skincare</div>
+            <h3>Estriol Face & Neck Creams</h3>
+            <p>
+              Luxurious, hormone-based topical formulations designed to leave skin feeling silky,
+              hydrated, and visibly smoother over time.
+            </p>
+            <ul>
+              <li>Targeted support for fine lines & texture</li>
+              <li>Customized strengths and routines</li>
+              <li>Pairs beautifully with peptide programs</li>
+            </ul>
+          </div>
+          <div class="treatment-footer">
+            <span>Prescription-only where appropriate.</span>
+            <button class="btn btn-outline" type="button">Explore estriol creams</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memberships -->
+  <section id="memberships" class="memberships">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">Memberships</div>
+        <h2 class="section-title">Commit to feeling better. We’ll commit to you.</h2>
+        <p class="section-subtitle">
+          Choose a 3, 6, or 12-month membership and unlock preferred pricing on medications,
+          priority messaging with your care team, and ongoing optimization.
+        </p>
+      </div>
+
+      <div class="membership-grid">
+        <div class="membership-card">
+          <h3>3-Month Reset</h3>
+          <div class="membership-term">Perfect for “trying it on” or kick-starting change.</div>
+          <div class="membership-price">$___ / month</div>
+          <div class="membership-note">Ideal for first-time GLP-1 or peptide patients.</div>
+          <ul>
+            <li>Initial consult & eligibility review</li>
+            <li>Personalized treatment plan</li>
+            <li>Check-ins every 4–6 weeks</li>
+          </ul>
+          <button class="btn btn-outline" type="button" onclick="scrollToSection('questionnaire')">
+            Start with 3 months
+          </button>
+        </div>
+
+        <div class="membership-card best">
+          <h3>6-Month Transformation</h3>
+          <div class="membership-term">Our most popular plan for visible, lasting change.</div>
+          <div class="membership-price">$___ / month</div>
+          <div class="membership-note">Includes discounted peptide & GLP-1 pricing.</div>
+          <ul>
+            <li>All 3-month benefits</li>
+            <li>More frequent dose optimization</li>
+            <li>Goal-based lab tracking where appropriate</li>
+          </ul>
+          <button class="btn btn-primary" type="button" onclick="scrollToSection('questionnaire')">
+            Choose 6-month plan
+          </button>
+        </div>
+
+        <div class="membership-card">
+          <h3>12-Month Lifestyle</h3>
+          <div class="membership-term">Designed for long-term wellness & longevity.</div>
+          <div class="membership-price">$___ / month</div>
+          <div class="membership-note">Best value for ongoing optimization and support.</div>
+          <ul>
+            <li>All 6-month benefits</li>
+            <li>Priority scheduling & concierge support</li>
+            <li>Exclusive offers on new therapies</li>
+          </ul>
+          <button class="btn btn-outline" type="button" onclick="scrollToSection('questionnaire')">
+            Join annual membership
+          </button>
+        </div>
+      </div>
+
+      <p class="membership-footnote">
+        *Discounted membership pricing available for 3, 6, and 12-month subscriptions.  
+        Exact pricing may vary by state regulations and medication selection.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why HEAL -->
+  <section id="why">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">Why HEAL Wellness</div>
+        <h2 class="section-title">Medical-grade care with a spa-calm feel.</h2>
+        <p class="section-subtitle">
+          We combine the ethics and rigor of medicine with the warmth of a wellness studio – so you can
+          feel cared for at every touchpoint.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Science-first, not trend-first</h3>
+          <p>
+            Our treatments are chosen for their clinical evidence and safety profiles – not because
+            they’re buzzing on social media. If we wouldn’t recommend it to family, we won’t offer it.
+          </p>
+        </div>
+        <div class="why-card">
+          <h3>Designed to be easy</h3>
+          <p>
+            From simple menus to refill reminders, every detail is built to reduce friction. You’ll
+            always know what you’re taking, why, and what to expect next.
+          </p>
+        </div>
+        <div class="why-card">
+          <h3>Whole-person approach</h3>
+          <p>
+            Weight, hormones, skin, sleep, and stress are connected. We look at your story, labs, and
+            lifestyle together to build a program that feels doable – not punishing.
+          </p>
+        </div>
+        <div class="why-card">
+          <h3>Ethical telehealth</h3>
+          <p>
+            Licensed providers, HIPAA-conscious systems, and transparent consent language ensure your
+            experience is both convenient and responsible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questionnaire / eligibility -->
+  <section id="questionnaire">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">Medical history & eligibility</div>
+        <h2 class="section-title">Let’s see if HEAL is a safe fit for you.</h2>
+        <p class="section-subtitle">
+          This brief questionnaire helps our providers determine which therapies you may qualify for in
+          your state. Your information is encrypted and reviewed by licensed clinicians only.
+        </p>
+      </div>
+
+      <div class="questionnaire-wrap">
+        <div class="form-header">
+          <h3>Secure intake questionnaire</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- Note: set form action to your EMR/intake system endpoint -->
+        <form id="intakeForm" action="/submit-intake" method="post">
+          <!-- STEP 1 -->
+          <div class="form-step active" data-step="1">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Mobile phone</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of birth</label>
+                <input type="text" id="dob" name="dob" placeholder="MM/DD/YYYY" required />
+              </div>
+              <div class="form-group">
+                <label for="state">State of residence</label>
+                <select id="state" name="state" required>
+                  <option value="">Select your state</option>
+                  <!-- (Shortened list – you can expand to full 50 states) -->
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>Arizona</option>
+                  <option>Arkansas</option>
+                  <option>California</option>
+                  <option>Colorado</option>
+                  <option>Connecticut</option>
+                  <option>Delaware</option>
+                  <option>Florida</option>
+                  <option>Georgia</option>
+                  <option>Hawaii</option>
+                  <option>Idaho</option>
+                  <option>Illinois</option>
+                  <option>Indiana</option>
+                  <option>Iowa</option>
+                  <option>Kansas</option>
+                  <option>Kentucky</option>
+                  <option>Louisiana</option>
+                  <option>Maine</option>
+                  <option>Maryland</option>
+                  <option>Massachusetts</option>
+                  <option>Michigan</option>
+                  <option>Minnesota</option>
+                  <option>Mississippi</option>
+                  <option>Missouri</option>
+                  <option>Montana</option>
+                  <option>Nebraska</option>
+                  <option>Nevada</option>
+                  <option>New Hampshire</option>
+                  <option>New Jersey</option>
+                  <option>New Mexico</option>
+                  <option>New York</option>
+                  <option>North Carolina</option>
+                  <option>North Dakota</option>
+                  <option>Ohio</option>
+                  <option>Oklahoma</option>
+                  <option>Oregon</option>
+                  <option>Pennsylvania</option>
+                  <option>Rhode Island</option>
+                  <option>South Carolina</option>
+                  <option>South Dakota</option>
+                  <option>Tennessee</option>
+                  <option>Texas</option>
+                  <option>Utah</option>
+                  <option>Vermont</option>
+                  <option>Virginia</option>
+                  <option>Washington</option>
+                  <option>West Virginia</option>
+                  <option>Wisconsin</option>
+                  <option>Wyoming</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="goals">Primary goals</label>
+                <textarea
+                  id="goals"
+                  name="goals"
+                  placeholder="Example: weight loss, improved energy, skin, sleep, recovery…"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="form-step" data-step="2">
+            <p class="form-note">
+              Please answer honestly – these questions help us keep you safe and determine if
+              medications like GLP-1s, hormones, or peptides are appropriate.
+            </p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="conditions">
+                  Current medical conditions (check or list all that apply)
+                </label>
+                <textarea
+                  id="conditions"
+                  name="conditions"
+                  placeholder="Example: high blood pressure, high cholesterol, diabetes, thyroid issues, heart disease, kidney or liver problems…"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="medications">Current medications & supplements</label>
+                <textarea
+                  id="medications"
+                  name="medications"
+                  placeholder="Include prescription, over-the-counter, vitamins, and any peptides or hormones you’re currently using."
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="allergies">Medication allergies</label>
+                <textarea
+                  id="allergies"
+                  name="allergies"
+                  placeholder="List medication allergies or type 'none'."
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="history">
+                  Surgical history or hospitalizations (last 5 years)
+                </label>
+                <textarea id="history" name="history"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="historyGLP">
+                  Have you ever used GLP-1s, hormone therapy, or peptides before?
+                </label>
+                <textarea
+                  id="historyGLP"
+                  name="historyGLP"
+                  placeholder="If yes, which ones and how did you respond?"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="contraindications">
+                  History of thyroid C-cell tumors, pancreatitis, or serious gallbladder disease?
+                </label>
+                <select id="contraindications" name="contraindications">
+                  <option value="">Please select</option>
+                  <option value="no">No</option>
+                  <option value="yes">Yes (details below)</option>
+                  <option value="unsure">Not sure</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="form-step" data-step="3">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="interests">Therapies you’re interested in</label>
+                <select id="interests" name="interests" multiple>
+                  <option>GLP-1 medical weight loss</option>
+                  <option>Peptide therapy</option>
+                  <option>Hormone optimization</option>
+                  <option>Estriol face & neck creams</option>
+                  <option>Not sure – please guide me</option>
+                </select>
+                <small class="form-note">
+                  Hold Ctrl (Windows) or Command (Mac) to select more than one.
+                </small>
+              </div>
+              <div class="form-group">
+                <label for="membershipPreference">
+                  Which membership length feels right today?
+                </label>
+                <select id="membershipPreference" name="membershipPreference">
+                  <option value="">I’m not sure yet</option>
+                  <option value="3">3-Month Reset</option>
+                  <option value="6">6-Month Transformation</option>
+                  <option value="12">12-Month Lifestyle</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contactPreference">Preferred way to be contacted</label>
+                <select id="contactPreference" name="contactPreference">
+                  <option>Email</option>
+                  <option>Text message</option>
+                  <option>Phone call</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>HIPAA consent & telehealth acknowledgement</label>
+                <div>
+                  <input type="checkbox" id="hipaa" name="hipaa" required />
+                  <label for="hipaa" style="font-weight: 400; font-size: 0.83rem;">
+                    I understand that HEAL Wellness uses HIPAA-conscious platforms to collect and store my
+                    health information, and I consent to care delivered via telehealth where allowed in my state.
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Research & education notice</label>
+                <div>
+                  <input type="checkbox" id="research" name="research" />
+                  <label for="research" style="font-weight: 400; font-size: 0.83rem;">
+                    I understand that some peptide therapies may be designated for research or
+                    off-label use and will only be prescribed when appropriate and allowed by law.
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <small>
+              This form does not create a patient-provider relationship or guarantee prescription approval.
+              Your eligibility and plan will be determined by a licensed clinician in your state.
+            </small>
+            <div class="form-buttons">
+              <button type="button" class="btn-secondary" id="prevBtn" disabled>Back</button>
+              <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">FAQ</div>
+        <h2 class="section-title">Quick answers before you begin.</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>How do you determine if I qualify?</h4>
+          <p>
+            Eligibility is based on your medical history, current medications, body measurements, and
+            state-specific regulations. Our clinicians review everything before prescribing any GLP-1,
+            peptide, hormone, or topical therapy.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Which states do you serve?</h4>
+          <p>
+            We’re continuously expanding. When you enter your state and complete the form, we’ll let
+            you know if HEAL Wellness is currently available there and which services are offered.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Will I speak with a real person?</h4>
+          <p>
+            Yes. A licensed provider reviews every intake, and in many cases you’ll have a
+            live telehealth visit to review your plan, lab work, and questions before starting.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Are memberships required?</h4>
+          <p>
+            No – but most patients prefer 3, 6, or 12-month memberships for better pricing and
+            continuity. We’ll help you choose the right option once we understand your goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-box">
+            <img src="heal-logo.png" alt="HEAL Wellness logo" />
+          </div>
+          <div>
+            <strong>HEAL Wellness</strong><br />
+            Peptides • GLP-1s • Hormones • Skincare
+          </div>
+        </div>
+        <p>
+          Helping patients across eligible U.S. states access safe, personalized therapies in a calm,
+          concierge-style setting – online and in-clinic.
+        </p>
+      </div>
+
+      <div class="footer-columns">
+        <h4>Clinic</h4>
+        <ul>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#memberships">Memberships</a></li>
+          <li><a href="#questionnaire">Start questionnaire</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-columns">
+        <h4>Contact</h4>
+        <ul>
+          <li>Phone: (XXX) XXX-XXXX</li>
+          <li>Email: info@healwellness.com</li>
+          <li>Telehealth & select in-person locations</li>
+          <li><a href="#">Privacy Policy</a> · <a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© HEAL Wellness. All rights reserved.</span>
+      <span>
+        Medical services are provided by licensed clinicians where HEAL Wellness operates and may not be
+        available in all states.
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll helper
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // State detection via IP geolocation (example)
+    (function detectState() {
+      const stateSpan = document.getElementById("userState");
+      const stateSelect = document.getElementById("state");
+
+      // Example using ipapi.co – you can swap to your preferred geo service
+      fetch("https://ipapi.co/json/")
+        .then((res) => res.json())
+        .then((data) => {
+          const region = data.region || data.region_code || "";
+          if (region) {
+            stateSpan.textContent = region;
+            // Try to preselect in dropdown if full state name
+            for (const option of stateSelect.options) {
+              if (option.text.toLowerCase() === region.toLowerCase()) {
+                stateSelect.value = option.text;
+                break;
+              }
+            }
+          } else {
+            stateSpan.textContent = "your state";
+          }
+        })
+        .catch(() => {
+          stateSpan.textContent = "your state";
+        });
+    })();
+
+    // Multi-step questionnaire logic
+    (function setupFormWizard() {
+      const steps = document.querySelectorAll(".form-step");
+      const nextBtn = document.getElementById("nextBtn");
+      const prevBtn = document.getElementById("prevBtn");
+      const progressFill = document.getElementById("progressFill");
+      const form = document.getElementById("intakeForm");
+      let currentStep = 0;
+
+      function updateStep(direction) {
+        steps[currentStep].classList.remove("active");
+        currentStep += direction;
+        if (currentStep < 0) currentStep = 0;
+        if (currentStep > steps.length - 1) currentStep = steps.length - 1;
+        steps[currentStep].classList.add("active");
+
+        // Progress
+        const percent = ((currentStep + 1) / steps.length) * 100;
+        progressFill.style.width = percent + "%";
+
+        // Buttons
+        prevBtn.disabled = currentStep === 0;
+        nextBtn.textContent = currentStep === steps.length - 1 ? "Submit" : "Next";
+      }
+
+      nextBtn.addEventListener("click", () => {
+        if (currentStep === steps.length - 1) {
+          form.submit();
+        } else {
+          updateStep(1);
+        }
+      });
+
+      prevBtn.addEventListener("click", () => updateStep(-1));
+    })();
+  </script>
+</body>
+</html>
